@@ -8,14 +8,12 @@
 <body>
     Update User Form
     <form action="update_user_scripts.php" method='POST'>
-        <?php
-        
+        <?php 
         $a=$_GET['id'];
         $b=$_GET['names'];
         $c=$_GET['email'];
         $d=$_GET['propic'];
         $e=$_GET['pass'];
-        
         ?>
         <input type="hidden" name="id" value="<?php echo $a; ?>">
         Names: <input type="text" name="names" value="<?php echo $b; ?>"><br><br>

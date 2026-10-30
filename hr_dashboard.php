@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'hr') {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +14,10 @@
 </head>
 <body>
     <a href="#">Home</a>
-    <a href="#">Lecturers</a>
-    <a href="#">Logout</a>
+    <a href="#">Lecturer</a>
+    <a href="logout.php">Logout</a>
+    <img src="uploads/<?php echo $_SESSION['profile_picture']; ?>" width="50" height="50">
+<?php echo $_SESSION['full_names']; ?>
     
 </body>
 </html>
