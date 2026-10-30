@@ -7,12 +7,12 @@
 </head>
 <body>
     <h2>List of Users</h2>
-    <table>
+    <table border=2 cellspacing=0>
         <tr>
             <th>User Id</th>
             <th>Full Names</th>
             <th>Email</th>
-            <th>Role</th>
+            <th>Password</th>
             <th>Profile Picture</th>
             <th>Update</th>
             <th>Delete</th>
@@ -29,8 +29,8 @@
         echo "<td>".$row['full_names']."</td>";
         echo "<td>".$row['email']."</td>";
         echo "<td>".$row['password']."</td>";
-        echo "<td>".$row['role']."</td>";
-        echo "<td>".$row['profile_picture']."</td>";
+        echo "<td><img src='uploads/".$row['profile_picture']."' width='50' height='50' 
+             alt='Profile Picture'></td>";
         echo "<td> <a href='update_user.php?id=".$row['user_id']."&names=".$row['full_names']."
               &email=".$row['email']."&pass=".$row['password']."&role=".$row['role']."
               &propic=".$row['profile_picture']."'>Update</a></td>";
