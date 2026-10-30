@@ -22,7 +22,7 @@
         $con=mysqli_connect('localhost','root','','school_management_db');
         $q="SELECT * FROM `users`";
         $select=mysqli_query($con,$q);
-        while($row=mysqli_fetch_array($select));
+        while($row=mysqli_fetch_array($select)){
 
         echo "<tr>";
         echo "<td>".$row['user_id']."</td>";
@@ -36,6 +36,8 @@
               &propic=".$row['profile_picture']."'>Update</a></td>";
         echo "<td> <a href='delete_user.php?id=".$row['user_id']."'>Delete</a></td>";
         echo "</tr>";
+
+        }
         ?>
     </table>
 </body>
