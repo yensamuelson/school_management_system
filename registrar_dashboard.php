@@ -16,7 +16,31 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'registrar') {
             background-color : whitesmoke;
         }
         .navigation {
-            
+            position: relative;
+            background-color: #2c3e50;
+            margin-left: -8px;
+            margin-top: -8px;
+            margin-right: -8px;
+            display: flex;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            height: 10%;
+        }
+        .navigation a {
+                color: white;
+                text-decoration: none;
+                margin-right: 10px;
+            }
+        .user {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+        .user img {
+            border-radius: 50%;
+            margin-right: 10px;
         }
     </style>
 </head>

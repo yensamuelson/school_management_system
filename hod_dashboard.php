@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['user_id'] || $_SESSION['role'] != 'hod')) {
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'hod') {
     header("location: login_form.php");
     exit();
 }
