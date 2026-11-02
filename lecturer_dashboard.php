@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'lecturer') {
-    header("Location: login.php");
+    header("Location: login_form.php");
     exit();
 }
 ?>
@@ -11,12 +11,18 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'lecturer') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="stylesheet">
+        img {
+            border-radius : 50%;
+        }
+    </style>
 </head>
 <body>
     <a href="#">Home</a>
     <a href="#">Marks</a>
     <a href="logout.php">Logout</a>
-    <img src="uploads/<?php echo $_SESSION['profile_picture']; ?>" width="50" height="50">
+
+<img src="uploads/<?php echo $_SESSION['profile_picture']; ?>" width="50" height="50">
 <?php echo $_SESSION['full_names']; ?>
     
 </body>

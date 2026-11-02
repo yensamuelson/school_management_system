@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'registrar') {
-    header("Location: login.php");
+    header("Location: login_form.php");
     exit();
 }
 ?>
@@ -11,13 +11,26 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'registrar') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color : whitesmoke;
+        }
+        .navigation {
+            
+        }
+    </style>
 </head>
 <body>
-    <a href="#">Home</a>
-    <a href="#">Students</a>
-    <a href="logout.php">Logout</a>
-    <img src="uploads/<?php echo $_SESSION['profile_picture']; ?>" width="50" height="50">
-<?php echo $_SESSION['full_names']; ?>
+    <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">Students</a>
+          <a href="logout.php">Logout</a>  
+    </div>
+    <div class="user">
+        <img src="uploads/<?php echo $_SESSION['profile_picture']; ?>" width="50" height="50">
+        <?php echo $_SESSION['full_names']; ?>
+    </div>
+    
     
 </body>
 </html>

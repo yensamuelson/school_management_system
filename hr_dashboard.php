@@ -1,9 +1,11 @@
 <?php
+
 session_start();
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'hr') {
-    header("Location: login.php");
+if (!isset($_SESSION['user_id'] || $_SESSION['role'] != 'hr')) {
+    header("location: login_form.php");
     exit();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
